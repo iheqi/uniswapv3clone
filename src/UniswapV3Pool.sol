@@ -52,8 +52,8 @@ contract UniswapV3Pool {
   constructor(
     address token0_,
     address token1_,
-    uint160 sqrtPriceX96,
-    int24 tick
+    uint160 sqrtPriceX96, // 现在的价格
+    int24 tick            // 对应的 tick
   ) {
     token0 = token0_;
     token1 = token1_;
