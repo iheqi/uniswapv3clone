@@ -69,7 +69,7 @@ contract UniswapV3Pool {
     slot0 = Slot0({ sqrtPriceX96: sqrtPriceX96, tick: tick });
   }
 
-  // mint 函数会包含以下参数：
+  // mint 函数包含以下参数：
 
   // 1.token 所有者的地址，来识别是谁提供的流动性；
   // 2.上界和下界的 tick，来设置价格区间的边界；
