@@ -180,10 +180,10 @@ contract UniswapV3PoolTest is Test {
 
 
     function uniswapV3MintCallback(uint256 amount0, uint256 amount1) public {
-        if (shouldTransferInCallback) {
-            token0.transfer(msg.sender, amount0);
-            token1.transfer(msg.sender, amount1);
-        }
+      if (shouldTransferInCallback) {
+        token0.transfer(msg.sender, amount0);
+        token1.transfer(msg.sender, amount1);
+      }
     }
 
     function uniswapV3SwapCallback(int256 amount0, int256 amount1) public {
