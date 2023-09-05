@@ -2,6 +2,7 @@ pragma solidity ^0.8.14;
 
 import './lib/Tick.sol';
 import './lib/Position.sol';
+import './lib/TickBitmap.sol';
 
 import "./interfaces/IERC20.sol";
 import "./interfaces/IUniswapV3MintCallback.sol";
@@ -18,6 +19,9 @@ contract UniswapV3Pool {
   using Tick for mapping(int24 => Tick.Info);
   using Position for mapping(bytes32 => Position.Info);
   using Position for Position.Info;
+
+  using TickBitmap for mapping(int16 => uint256);
+  mapping(int16 => uint256) public tickBitmap;
 
   error InsufficientInputAmount();
   error InvalidTickRange();
